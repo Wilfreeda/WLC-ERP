@@ -268,7 +268,8 @@
    "fetch_from": "educator.full_name",
    "fieldname": "educator_name",
    "fieldtype": "Data",
-   "label": "Educator Name"
+   "label": "Educator Name",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
@@ -279,7 +280,7 @@
    "link_fieldname": "enrollment_id"
   }
  ],
- "modified": "2024-11-21 21:15:23.539501",
+ "modified": "2024-11-21 21:24:00.931058",
  "modified_by": "Administrator",
  "module": "WLC LMS",
  "name": "Student Enrollment",
