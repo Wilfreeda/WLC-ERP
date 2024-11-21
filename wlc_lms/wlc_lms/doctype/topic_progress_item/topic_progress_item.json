@@ -1,0 +1,76 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-11 14:03:23.860718",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "topic_id",
+  "topic_name",
+  "column_break_vyor",
+  "assigned_weight",
+  "current_progress",
+  "section_break_zdbf",
+  "assignment_submitted"
+ ],
+ "fields": [
+  {
+   "fieldname": "topic_id",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "label": "Topic ID",
+   "options": "Course Topics"
+  },
+  {
+   "fetch_from": "topic_id.topic_name",
+   "fieldname": "topic_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Topic Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_vyor",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "assigned_weight",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Assigned Weight",
+   "read_only": 1
+  },
+  {
+   "fieldname": "current_progress",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Current Progress",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_zdbf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "assignment_submitted",
+   "fieldtype": "Check",
+   "label": "Assignment Submitted",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-11-11 14:06:46.911980",
+ "modified_by": "Administrator",
+ "module": "WLC LMS",
+ "name": "Topic Progress Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

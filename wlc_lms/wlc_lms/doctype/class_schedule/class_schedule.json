@@ -1,0 +1,232 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:CLS-{MM}-{student_name}-{####}",
+ "creation": "2024-11-14 17:46:04.331842",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "class_tab",
+  "created_date",
+  "column_break_cefq",
+  "created_time",
+  "column_break_jvwt",
+  "class_status",
+  "title",
+  "section_break_pgeo",
+  "class_from",
+  "class_to",
+  "duration",
+  "schedule_type",
+  "column_break_hddg",
+  "enrollment_id",
+  "educator",
+  "educator_name",
+  "student",
+  "student_name",
+  "section_break_dndx",
+  "schedules_topics",
+  "section_break_auuo",
+  "class_link",
+  "class_coverage_tab",
+  "actual_topic_covered_in_the_class",
+  "section_break_xypm",
+  "materials_given",
+  "student_works_tab",
+  "materials_from_students",
+  "rescheduling_tab",
+  "table_vbls"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "created_date",
+   "fieldtype": "Date",
+   "label": "Created Date"
+  },
+  {
+   "fieldname": "column_break_cefq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Now",
+   "fieldname": "created_time",
+   "fieldtype": "Time",
+   "label": "Created Time"
+  },
+  {
+   "fieldname": "column_break_jvwt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "class_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Class Status",
+   "options": "Draft\nScheduled\nOpen\nClass Completed\nTasks Completed\nCancelled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Title",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_pgeo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "class_from",
+   "fieldtype": "Datetime",
+   "label": "Class From"
+  },
+  {
+   "fieldname": "class_to",
+   "fieldtype": "Datetime",
+   "label": "Class To"
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Duration",
+   "label": "Duration",
+   "read_only": 1
+  },
+  {
+   "fieldname": "schedule_type",
+   "fieldtype": "Select",
+   "label": "Schedule Type",
+   "options": "\nClass\nActivity"
+  },
+  {
+   "fieldname": "column_break_hddg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "enrollment_id.educator",
+   "fieldname": "educator",
+   "fieldtype": "Link",
+   "label": "Educator",
+   "options": "Educator"
+  },
+  {
+   "fetch_from": "enrollment_id.student_id",
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "label": "Student",
+   "options": "Student"
+  },
+  {
+   "fetch_from": "educator.full_name",
+   "fieldname": "educator_name",
+   "fieldtype": "Data",
+   "label": "Educator Name"
+  },
+  {
+   "fetch_from": "student.full_name",
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "label": "Student Name"
+  },
+  {
+   "fieldname": "class_tab",
+   "fieldtype": "Tab Break",
+   "label": "Class"
+  },
+  {
+   "fieldname": "section_break_dndx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "schedules_topics",
+   "fieldtype": "Table",
+   "label": "Topics to be covered in this class",
+   "options": "Scheduled Topics"
+  },
+  {
+   "fieldname": "class_coverage_tab",
+   "fieldtype": "Tab Break",
+   "label": "Class Coverage"
+  },
+  {
+   "fieldname": "actual_topic_covered_in_the_class",
+   "fieldtype": "Table",
+   "label": "Actual topic covered in the class",
+   "options": "Scheduled Topics"
+  },
+  {
+   "fieldname": "section_break_xypm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "materials_given",
+   "fieldtype": "Table",
+   "label": "Materials Given",
+   "options": "Class Materials"
+  },
+  {
+   "fieldname": "student_works_tab",
+   "fieldtype": "Tab Break",
+   "label": "Student Works"
+  },
+  {
+   "fieldname": "materials_from_students",
+   "fieldtype": "Table",
+   "label": "Materials From Students",
+   "options": "Student Works"
+  },
+  {
+   "fieldname": "section_break_auuo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "class_link",
+   "fieldtype": "Data",
+   "label": "Class Link"
+  },
+  {
+   "fieldname": "rescheduling_tab",
+   "fieldtype": "Tab Break",
+   "label": "Rescheduling"
+  },
+  {
+   "fieldname": "table_vbls",
+   "fieldtype": "Table",
+   "options": "Class Events"
+  },
+  {
+   "fieldname": "enrollment_id",
+   "fieldtype": "Link",
+   "label": "Enrollment ID",
+   "options": "Student Enrollment"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_calendar_and_gantt": 1,
+ "links": [],
+ "modified": "2024-11-21 12:42:50.686866",
+ "modified_by": "Administrator",
+ "module": "WLC LMS",
+ "name": "Class Schedule",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

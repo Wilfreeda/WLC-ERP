@@ -1,0 +1,105 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-11-11 13:01:38.462063",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "enabled",
+  "topic_informations_section",
+  "topic_name",
+  "topic_display_name",
+  "weightage",
+  "column_break_axsc",
+  "topic_description",
+  "section_break_mzuy",
+  "notes",
+  "note_section",
+  "naming_series"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "topic_informations_section",
+   "fieldtype": "Section Break",
+   "label": "Topic Informations"
+  },
+  {
+   "fieldname": "topic_name",
+   "fieldtype": "Data",
+   "label": "Topic Name"
+  },
+  {
+   "fieldname": "topic_display_name",
+   "fieldtype": "Data",
+   "label": "Topic Display Name"
+  },
+  {
+   "fieldname": "weightage",
+   "fieldtype": "Percent",
+   "label": "Weightage"
+  },
+  {
+   "fieldname": "column_break_axsc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "topic_description",
+   "fieldtype": "Long Text",
+   "label": "Topic Description"
+  },
+  {
+   "fieldname": "section_break_mzuy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "notes",
+   "fieldtype": "Check",
+   "label": "Notes"
+  },
+  {
+   "depends_on": "eval:doc.notes == 1",
+   "fieldname": "note_section",
+   "fieldtype": "Small Text",
+   "label": "Important Notes",
+   "mandatory_depends_on": "eval:doc.notes == 1"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "naming_series",
+   "options": "TOPIC-."
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-11 13:20:51.429283",
+ "modified_by": "Administrator",
+ "module": "WLC LMS",
+ "name": "Course Topics",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -148,6 +148,12 @@ app_license = "mit"
 # 	}
 # }
 
+doc_events = {
+    "User": {
+        "after_insert": "wlc_lms.wlc_lms.doctype.student.student.create_student_user"
+    }
+}
+
 # Scheduled Tasks
 # ---------------
 

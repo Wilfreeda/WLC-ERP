@@ -1,0 +1,203 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "ENR-.YYYY.-.######",
+ "creation": "2024-11-11 13:39:14.087403",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "enrollment_details_section_section",
+  "student_id",
+  "student_name",
+  "date_of_enrollment",
+  "column_break_qfjx",
+  "gender",
+  "mobile_no",
+  "email",
+  "column_break_nqok",
+  "start_date",
+  "expiry_date",
+  "course_duration",
+  "course_details_section",
+  "course_id",
+  "column_break_nkys",
+  "course_name",
+  "progress_section",
+  "enrollment_items",
+  "overall_progress",
+  "section_break_wmyz",
+  "enrollment_status",
+  "validity",
+  "validity_section",
+  "extension",
+  "number_of_extensions"
+ ],
+ "fields": [
+  {
+   "fieldname": "enrollment_details_section_section",
+   "fieldtype": "Section Break",
+   "label": "Enrollment Details"
+  },
+  {
+   "fieldname": "student_id",
+   "fieldtype": "Link",
+   "label": "Student ID",
+   "options": "Student"
+  },
+  {
+   "fetch_from": "student_id.full_name",
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "label": "Student Name"
+  },
+  {
+   "fieldname": "column_break_qfjx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "student_id.gender",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender"
+  },
+  {
+   "fetch_from": "student_id.mobile_no",
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "label": "Mobile No"
+  },
+  {
+   "fetch_from": "student_id.email",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "column_break_nqok",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Expiry Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "course_duration",
+   "fieldtype": "Duration",
+   "label": "Course Duration",
+   "read_only": 1
+  },
+  {
+   "fieldname": "course_details_section",
+   "fieldtype": "Section Break",
+   "label": "Course Details"
+  },
+  {
+   "fieldname": "course_id",
+   "fieldtype": "Link",
+   "label": "Course ID",
+   "options": "Course"
+  },
+  {
+   "fetch_from": "course_id.course_name",
+   "fieldname": "course_name",
+   "fieldtype": "Data",
+   "label": "Course Name"
+  },
+  {
+   "fieldname": "column_break_nkys",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "progress_section",
+   "fieldtype": "Section Break",
+   "label": "Progress"
+  },
+  {
+   "fieldname": "enrollment_items",
+   "fieldtype": "Table",
+   "label": "Enrollment Items",
+   "options": "Enrollement Items"
+  },
+  {
+   "fieldname": "overall_progress",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Overall Progress",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_wmyz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "enrollment_status",
+   "fieldtype": "Select",
+   "label": "Enrollment Status",
+   "options": "\nActive\nExpired\nInactive\nCancelled\nDisabled"
+  },
+  {
+   "fieldname": "validity_section",
+   "fieldtype": "Section Break",
+   "label": "Validity"
+  },
+  {
+   "depends_on": "eval:doc.no_of_extensions > 0",
+   "fieldname": "extension",
+   "fieldtype": "Duration",
+   "hide_seconds": 1,
+   "label": "Total Extended Days",
+   "read_only": 1
+  },
+  {
+   "fieldname": "number_of_extensions",
+   "fieldtype": "Data",
+   "label": "Number of Extensions",
+   "read_only": 1
+  },
+  {
+   "fieldname": "date_of_enrollment",
+   "fieldtype": "Date",
+   "label": "Date of Enrollment"
+  },
+  {
+   "fieldname": "validity",
+   "fieldtype": "Table",
+   "label": "Validity",
+   "options": "Validity Extension"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-11 14:32:48.664175",
+ "modified_by": "Administrator",
+ "module": "WLC LMS",
+ "name": "Enrollment",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

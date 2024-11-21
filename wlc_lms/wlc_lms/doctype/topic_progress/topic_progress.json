@@ -1,0 +1,129 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "TOPIC-PROG-.######",
+ "creation": "2024-11-11 13:57:46.108024",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "topic_progress_section",
+  "enrollemnt_id",
+  "student_od",
+  "student_name",
+  "column_break_ixec",
+  "course_id",
+  "course_name",
+  "weightage_towards_course_progress",
+  "topics_section",
+  "table_qjud",
+  "section_break_kcsh",
+  "programme_progress",
+  "column_break_wqxv",
+  "overall_progress"
+ ],
+ "fields": [
+  {
+   "fieldname": "topic_progress_section",
+   "fieldtype": "Section Break",
+   "label": "Topic Progress"
+  },
+  {
+   "fieldname": "enrollemnt_id",
+   "fieldtype": "Link",
+   "label": "Enrollemnt ID",
+   "options": "Enrollment"
+  },
+  {
+   "fieldname": "student_od",
+   "fieldtype": "Link",
+   "label": "Student OD",
+   "options": "Student"
+  },
+  {
+   "fetch_from": "student_od.full_name",
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Student Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ixec",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "course_id",
+   "fieldtype": "Link",
+   "label": "Course ID",
+   "options": "Course"
+  },
+  {
+   "fetch_from": "course_id.course_title",
+   "fieldname": "course_name",
+   "fieldtype": "Data",
+   "label": "Course Name"
+  },
+  {
+   "fieldname": "weightage_towards_course_progress",
+   "fieldtype": "Percent",
+   "label": "Weightage Towards Course Progress",
+   "read_only": 1
+  },
+  {
+   "fieldname": "topics_section",
+   "fieldtype": "Section Break",
+   "label": "Topics"
+  },
+  {
+   "fieldname": "table_qjud",
+   "fieldtype": "Table",
+   "options": "Topic Progress Item"
+  },
+  {
+   "fieldname": "section_break_kcsh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "programme_progress",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Programme Progress",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_wqxv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "overall_progress",
+   "fieldtype": "Percent",
+   "label": "Overall Progress",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-11 14:09:00.053405",
+ "modified_by": "Administrator",
+ "module": "WLC LMS",
+ "name": "Topic Progress",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

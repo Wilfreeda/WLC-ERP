@@ -1,0 +1,53 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-14 18:43:45.390161",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "class_event",
+  "reason",
+  "event_time",
+  "class_time"
+ ],
+ "fields": [
+  {
+   "fieldname": "class_event",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Class Event",
+   "options": "\nScheduled\nRescheduled\nCancelled\nCompleted"
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Reason"
+  },
+  {
+   "fieldname": "event_time",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Event Time"
+  },
+  {
+   "fieldname": "class_time",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Class Time"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-11-14 18:46:33.029732",
+ "modified_by": "Administrator",
+ "module": "WLC LMS",
+ "name": "Class Events",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

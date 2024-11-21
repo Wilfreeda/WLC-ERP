@@ -1,0 +1,95 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "autoname": "format:WLC-UPI-{upi_name}",
+    "creation": "2024-11-19 11:30:34.436578",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "upi_name",
+        "upi_id",
+        "banking_name",
+        "branch_name",
+        "column_break_jtwp",
+        "bank_name",
+        "account_number",
+        "ifsc"
+    ],
+    "fields": [
+        {
+            "fieldname": "upi_name",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "UPI Name",
+            "reqd": 1
+        },
+        {
+            "fieldname": "upi_id",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "UPI ID",
+            "reqd": 1
+        },
+        {
+            "fieldname": "banking_name",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Banking Name",
+            "reqd": 1
+        },
+        {
+            "fieldname": "column_break_jtwp",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "bank_name",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Bank Name",
+            "reqd": 1
+        },
+        {
+            "fieldname": "account_number",
+            "fieldtype": "Data",
+            "label": "Account Number",
+            "reqd": 1
+        },
+        {
+            "fieldname": "ifsc",
+            "fieldtype": "Data",
+            "label": "IFSC",
+            "reqd": 1
+        },
+        {
+            "fieldname": "branch_name",
+            "fieldtype": "Data",
+            "label": "Branch Name",
+            "reqd": 1
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2024-11-19 11:40:13.203221",
+    "modified_by": "Administrator",
+    "module": "WLC LMS",
+    "name": "WLC UPI",
+    "naming_rule": "Expression",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "creation",
+    "sort_order": "DESC",
+    "states": []
+}

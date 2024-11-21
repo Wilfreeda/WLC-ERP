@@ -1,0 +1,187 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:course_title",
+ "creation": "2024-11-11 10:44:26.911735",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "enabled",
+  "column_break_nnfx",
+  "show_on_web",
+  "course_details_section",
+  "course_title",
+  "course_image",
+  "course_fee",
+  "column_break_cpeq",
+  "course_duration",
+  "course_image_2",
+  "for_banner_section",
+  "program_type",
+  "rating",
+  "number_of_rating",
+  "column_break_kckn",
+  "skills",
+  "section_break_lmwc",
+  "course_description",
+  "why",
+  "reasons",
+  "course_items_section",
+  "topic_table",
+  "course_statistics_section",
+  "total_topics"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "column_break_nnfx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "show_on_web",
+   "fieldtype": "Check",
+   "label": "Show on Web"
+  },
+  {
+   "fieldname": "course_details_section",
+   "fieldtype": "Section Break",
+   "label": "Course Details"
+  },
+  {
+   "fieldname": "course_image",
+   "fieldtype": "Attach Image",
+   "label": "Course Image"
+  },
+  {
+   "fieldname": "column_break_cpeq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "course_duration",
+   "fieldtype": "Data",
+   "label": "Course Duration"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_lmwc",
+   "fieldtype": "Section Break",
+   "label": "Description"
+  },
+  {
+   "fieldname": "course_description",
+   "fieldtype": "Small Text",
+   "label": "Short Description"
+  },
+  {
+   "fieldname": "course_image_2",
+   "fieldtype": "Attach Image",
+   "label": "Course Image for Datailed Page"
+  },
+  {
+   "fieldname": "for_banner_section",
+   "fieldtype": "Section Break",
+   "label": "For Banner"
+  },
+  {
+   "fieldname": "program_type",
+   "fieldtype": "Data",
+   "label": "Program Type"
+  },
+  {
+   "fieldname": "rating",
+   "fieldtype": "Rating",
+   "label": "Rating"
+  },
+  {
+   "fieldname": "number_of_rating",
+   "fieldtype": "Data",
+   "label": "Number of Rating"
+  },
+  {
+   "fieldname": "column_break_kckn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "course_title",
+   "fieldtype": "Data",
+   "label": "Course Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "skills",
+   "fieldtype": "Table",
+   "label": "Skills",
+   "options": "Course Skills"
+  },
+  {
+   "fieldname": "why",
+   "fieldtype": "Table",
+   "label": "Why should learn this course",
+   "options": "Course Details Points"
+  },
+  {
+   "fieldname": "reasons",
+   "fieldtype": "Table",
+   "label": "Why choose our program",
+   "options": "Why Our Courses"
+  },
+  {
+   "fieldname": "course_items_section",
+   "fieldtype": "Section Break",
+   "label": "Course Items"
+  },
+  {
+   "fieldname": "course_statistics_section",
+   "fieldtype": "Section Break",
+   "label": "Course Statistics"
+  },
+  {
+   "fieldname": "topic_table",
+   "fieldtype": "Table",
+   "options": "Course Items"
+  },
+  {
+   "fieldname": "total_topics",
+   "fieldtype": "Data",
+   "label": "Total Topics"
+  },
+  {
+   "default": "0.0",
+   "fieldname": "course_fee",
+   "fieldtype": "Currency",
+   "label": "Course Fee",
+   "precision": "2"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-19 14:55:38.163200",
+ "modified_by": "Administrator",
+ "module": "WLC LMS",
+ "name": "Course",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

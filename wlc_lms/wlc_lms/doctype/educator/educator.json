@@ -1,0 +1,345 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "WLC-EDU-.####",
+ "creation": "2024-11-14 16:05:38.958720",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "enabled",
+  "user_id",
+  "first_name",
+  "last_name",
+  "full_name",
+  "educator_image",
+  "column_break_xqde",
+  "gender",
+  "date_of_birth",
+  "date_of_joining",
+  "column_break_ecqg",
+  "status",
+  "in_house",
+  "external",
+  "subjects_handled_section",
+  "educator_subjects",
+  "address_tab",
+  "mobile_no",
+  "aadhaar_card_no",
+  "passport_no",
+  "column_break_zpdn",
+  "perasonal_email",
+  "company_email",
+  "section_break_sfgi",
+  "home_address",
+  "district",
+  "column_break_vuzb",
+  "emergency_contact_name",
+  "emergency_contact_number",
+  "relation",
+  "tab_3_tab",
+  "payment_cost_center",
+  "pan_number",
+  "column_break_kfgf",
+  "bank_name",
+  "bank_account_no",
+  "ifsc_code",
+  "skill_map_tab",
+  "classes",
+  "content_creation",
+  "social_media_sessions",
+  "exit_tab",
+  "date_of_resignation",
+  "relieving_date",
+  "column_break_vhlv",
+  "exit_interview_held_on",
+  "section_break_cnco",
+  "reason_for_exit",
+  "column_break_wrjy",
+  "feedback"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "fetch_from": "user_id.first_name",
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name"
+  },
+  {
+   "fetch_from": "user_id.last_name",
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "educator_image",
+   "fieldtype": "Attach Image",
+   "label": "Educator Image"
+  },
+  {
+   "fieldname": "column_break_xqde",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "user_id.gender",
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "Gender",
+   "options": "Gender"
+  },
+  {
+   "fetch_from": "user_id.birth_date",
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "date_of_joining",
+   "fieldtype": "Date",
+   "label": "Date of Joining"
+  },
+  {
+   "fieldname": "column_break_ecqg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nActive\nInactive\nTerminated\nLeft"
+  },
+  {
+   "default": "0",
+   "fieldname": "in_house",
+   "fieldtype": "Check",
+   "label": "In House"
+  },
+  {
+   "default": "0",
+   "fieldname": "external",
+   "fieldtype": "Check",
+   "label": "External"
+  },
+  {
+   "fieldname": "user_id",
+   "fieldtype": "Link",
+   "label": "User ID",
+   "options": "User"
+  },
+  {
+   "fieldname": "subjects_handled_section",
+   "fieldtype": "Section Break",
+   "label": "Subjects Handled "
+  },
+  {
+   "fieldname": "educator_subjects",
+   "fieldtype": "Table",
+   "label": "Educator Subjects",
+   "options": "Educator Subject"
+  },
+  {
+   "fieldname": "address_tab",
+   "fieldtype": "Tab Break",
+   "label": "Address & Contact"
+  },
+  {
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "label": "Mobile No"
+  },
+  {
+   "fieldname": "aadhaar_card_no",
+   "fieldtype": "Data",
+   "label": "Aadhaar Card No"
+  },
+  {
+   "fieldname": "passport_no",
+   "fieldtype": "Data",
+   "label": "Passport No"
+  },
+  {
+   "fieldname": "column_break_zpdn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "perasonal_email",
+   "fieldtype": "Data",
+   "label": "Perasonal Email"
+  },
+  {
+   "fieldname": "company_email",
+   "fieldtype": "Data",
+   "label": "Company Email"
+  },
+  {
+   "fieldname": "section_break_sfgi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "home_address",
+   "fieldtype": "Small Text",
+   "label": "Home Address"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "label": "District",
+   "options": "District"
+  },
+  {
+   "fieldname": "tab_3_tab",
+   "fieldtype": "Tab Break",
+   "label": "Payments"
+  },
+  {
+   "fieldname": "payment_cost_center",
+   "fieldtype": "Link",
+   "label": "Payment Cost Center",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "pan_number",
+   "fieldtype": "Data",
+   "label": "PAN Number"
+  },
+  {
+   "fieldname": "column_break_kfgf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bank_name",
+   "fieldtype": "Data",
+   "label": "Bank Name"
+  },
+  {
+   "fieldname": "bank_account_no",
+   "fieldtype": "Data",
+   "label": "Bank Account No"
+  },
+  {
+   "fieldname": "ifsc_code",
+   "fieldtype": "Data",
+   "label": "IFSC Code"
+  },
+  {
+   "fieldname": "skill_map_tab",
+   "fieldtype": "Tab Break",
+   "label": "Skill Map"
+  },
+  {
+   "fieldname": "classes",
+   "fieldtype": "Table",
+   "label": "Classes",
+   "options": "Skill Metrics"
+  },
+  {
+   "fieldname": "content_creation",
+   "fieldtype": "Table",
+   "label": "Content Creation",
+   "options": "Skill Metrics"
+  },
+  {
+   "fieldname": "social_media_sessions",
+   "fieldtype": "Table",
+   "label": "Social Media Sessions",
+   "options": "Skill Metrics"
+  },
+  {
+   "fieldname": "exit_tab",
+   "fieldtype": "Tab Break",
+   "label": "Exit"
+  },
+  {
+   "fieldname": "date_of_resignation",
+   "fieldtype": "Date",
+   "label": "Date of Resignation"
+  },
+  {
+   "fieldname": "relieving_date",
+   "fieldtype": "Date",
+   "label": "Relieving Date"
+  },
+  {
+   "fieldname": "column_break_vhlv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "exit_interview_held_on",
+   "fieldtype": "Date",
+   "label": "Exit Interview Held On"
+  },
+  {
+   "fieldname": "section_break_cnco",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "reason_for_exit",
+   "fieldtype": "Small Text",
+   "label": "Reason for Exit"
+  },
+  {
+   "fieldname": "column_break_wrjy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "feedback",
+   "fieldtype": "Small Text",
+   "label": "Feedback"
+  },
+  {
+   "fieldname": "column_break_vuzb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "emergency_contact_name",
+   "fieldtype": "Data",
+   "label": "Emergency Contact Name"
+  },
+  {
+   "fieldname": "emergency_contact_number",
+   "fieldtype": "Data",
+   "label": "Emergency Contact Number"
+  },
+  {
+   "fieldname": "relation",
+   "fieldtype": "Data",
+   "label": "Relation"
+  },
+  {
+   "fetch_from": "user_id.full_name",
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-21 11:55:54.945421",
+ "modified_by": "Administrator",
+ "module": "WLC LMS",
+ "name": "Educator",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

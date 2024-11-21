@@ -1,0 +1,91 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:course_title",
+ "creation": "2024-11-11 13:22:34.337920",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "banner_section_section",
+  "program_type",
+  "rating",
+  "course_image",
+  "column_break_ygce",
+  "number_of_rating",
+  "course_title",
+  "section_break_wpxp",
+  "course_skills"
+ ],
+ "fields": [
+  {
+   "fieldname": "banner_section_section",
+   "fieldtype": "Section Break",
+   "label": "Banner Section"
+  },
+  {
+   "fieldname": "program_type",
+   "fieldtype": "Data",
+   "label": "Program Type"
+  },
+  {
+   "fieldname": "rating",
+   "fieldtype": "Rating",
+   "label": "Rating"
+  },
+  {
+   "fieldname": "column_break_ygce",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "number_of_rating",
+   "fieldtype": "Data",
+   "label": "Number of Rating"
+  },
+  {
+   "fieldname": "course_title",
+   "fieldtype": "Data",
+   "label": "Course Title",
+   "unique": 1
+  },
+  {
+   "fieldname": "section_break_wpxp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "course_skills",
+   "fieldtype": "Table",
+   "label": "Course Skills",
+   "options": "Course Skills"
+  },
+  {
+   "fieldname": "course_image",
+   "fieldtype": "Attach Image",
+   "label": "Course Image"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-11 13:28:56.903247",
+ "modified_by": "Administrator",
+ "module": "WLC LMS",
+ "name": "Detailed Course Page",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,102 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "FEAT-COURSE-.#####",
+ "creation": "2024-11-11 14:17:05.115697",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "enabled",
+  "column_break_tqdi",
+  "show_on_web",
+  "course_details_section",
+  "course_id",
+  "course_name",
+  "column_break_rlxr",
+  "course_image",
+  "section_break_smvx",
+  "course_description"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "column_break_tqdi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "show_on_web",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Show on Web"
+  },
+  {
+   "fieldname": "course_details_section",
+   "fieldtype": "Section Break",
+   "label": "Course Details"
+  },
+  {
+   "fieldname": "course_id",
+   "fieldtype": "Link",
+   "label": "Course ID",
+   "options": "Course"
+  },
+  {
+   "fetch_from": "course_id.course_title",
+   "fieldname": "course_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Course Name"
+  },
+  {
+   "fieldname": "column_break_rlxr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_smvx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "course_id.course_description",
+   "fieldname": "course_description",
+   "fieldtype": "Small Text",
+   "label": "Course Description"
+  },
+  {
+   "fetch_from": "course_id.course_image",
+   "fieldname": "course_image",
+   "fieldtype": "Attach Image",
+   "label": "Course Image"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-12 10:18:55.978039",
+ "modified_by": "Administrator",
+ "module": "WLC LMS",
+ "name": "Featured Course",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

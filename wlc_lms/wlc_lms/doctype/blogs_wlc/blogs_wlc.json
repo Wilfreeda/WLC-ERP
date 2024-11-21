@@ -1,0 +1,79 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "WLC-BLOG-.####",
+ "creation": "2024-11-12 14:06:57.578902",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "enabled",
+  "column_break_dzug",
+  "show_on_website",
+  "section_break_lvoh",
+  "blog_title",
+  "blog_content",
+  "blog_image"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "column_break_dzug",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "show_on_website",
+   "fieldtype": "Check",
+   "label": "Show on Website"
+  },
+  {
+   "fieldname": "section_break_lvoh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "blog_title",
+   "fieldtype": "Data",
+   "label": "Blog Title"
+  },
+  {
+   "fieldname": "blog_content",
+   "fieldtype": "Text Editor",
+   "label": "Blog Content"
+  },
+  {
+   "fieldname": "blog_image",
+   "fieldtype": "Attach Image",
+   "label": "Blog Image"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-12 14:09:03.903627",
+ "modified_by": "Administrator",
+ "module": "WLC LMS",
+ "name": "Blogs WLC",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

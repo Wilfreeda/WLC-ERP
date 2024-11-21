@@ -1,0 +1,89 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-13 10:24:41.591885",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "enable_lms",
+  "column_break_fnwj",
+  "hostname",
+  "image_settings_section",
+  "default_image",
+  "support_section",
+  "support_number",
+  "versions_section",
+  "lms_version"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "enable_lms",
+   "fieldtype": "Check",
+   "label": "Enable LMS"
+  },
+  {
+   "fieldname": "column_break_fnwj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "hostname",
+   "fieldtype": "Data",
+   "label": "Hostname"
+  },
+  {
+   "fieldname": "image_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Image Settings"
+  },
+  {
+   "fieldname": "default_image",
+   "fieldtype": "Attach Image",
+   "label": "Default Image"
+  },
+  {
+   "fieldname": "support_section",
+   "fieldtype": "Section Break",
+   "label": "Support"
+  },
+  {
+   "fieldname": "support_number",
+   "fieldtype": "Data",
+   "label": "Support Number"
+  },
+  {
+   "fieldname": "versions_section",
+   "fieldtype": "Section Break",
+   "label": "Versions"
+  },
+  {
+   "fieldname": "lms_version",
+   "fieldtype": "Data",
+   "label": "LMS Version"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-11-13 10:26:39.026241",
+ "modified_by": "Administrator",
+ "module": "WLC LMS",
+ "name": "WLC LMS Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

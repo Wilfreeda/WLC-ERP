@@ -1,0 +1,86 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:WLC-CANDIDATE-{DD}{MM}{YY}-{###}",
+ "creation": "2024-11-10 15:03:58.216484",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "full_name",
+  "email_address",
+  "phone_number",
+  "education",
+  "column_break_ymlq",
+  "residential_address",
+  "applying_for",
+  "passport"
+ ],
+ "fields": [
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "email_address",
+   "fieldtype": "Data",
+   "label": "Email Address"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "label": "Phone Number"
+  },
+  {
+   "fieldname": "education",
+   "fieldtype": "Data",
+   "label": "Highest Educational Qualification"
+  },
+  {
+   "fieldname": "column_break_ymlq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "residential_address",
+   "fieldtype": "Small Text",
+   "label": "Residential Address"
+  },
+  {
+   "fieldname": "applying_for",
+   "fieldtype": "Select",
+   "label": "Applying For",
+   "options": "WLC IELTS\nWLC GERMAN\nWLC CE\nWLC OET\nWLC COORPORATE\nWLC FOR SCHOOL"
+  },
+  {
+   "default": "0",
+   "fieldname": "passport",
+   "fieldtype": "Check",
+   "label": "Passport Holder"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-10 15:08:06.129237",
+ "modified_by": "Administrator",
+ "module": "WLC LMS",
+ "name": "Candidate Request",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,83 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-11 13:55:28.254808",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "topic_progress",
+  "course_id",
+  "topic_progress_id",
+  "course_name",
+  "weightage",
+  "column_break_queb",
+  "course_percentage",
+  "go_to_topic_progress"
+ ],
+ "fields": [
+  {
+   "fieldname": "topic_progress",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Topic Progress",
+   "read_only": 1
+  },
+  {
+   "fieldname": "course_id",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "label": "Course ID",
+   "options": "Course"
+  },
+  {
+   "fieldname": "topic_progress_id",
+   "fieldtype": "Link",
+   "label": "Topic Progress ID",
+   "options": "Topic Progress",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "course_id.course_name",
+   "fieldname": "course_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Course Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "weightage",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Weightage",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_queb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "course_percentage",
+   "fieldtype": "Percent",
+   "label": "Course Percentage"
+  },
+  {
+   "fieldname": "go_to_topic_progress",
+   "fieldtype": "Button",
+   "label": "Go To Topic Progress"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-11-11 14:11:02.674543",
+ "modified_by": "Administrator",
+ "module": "WLC LMS",
+ "name": "Enrollement Items",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
