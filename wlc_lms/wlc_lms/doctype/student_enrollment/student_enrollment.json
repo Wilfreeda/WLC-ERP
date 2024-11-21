@@ -16,6 +16,7 @@
   "course_name",
   "course_fee",
   "net_total",
+  "course_duration",
   "column_break_lshw",
   "student_id",
   "student_name",
@@ -68,8 +69,7 @@
    "fieldname": "student_id",
    "fieldtype": "Link",
    "label": "Student ID",
-   "options": "Student",
-   "read_only": 1
+   "options": "Student"
   },
   {
    "fetch_from": "student_id.full_name",
@@ -99,6 +99,7 @@
   {
    "fieldname": "admission_id",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Admission ID",
    "options": "Student Admission"
   },
@@ -107,16 +108,14 @@
    "fieldname": "course_name",
    "fieldtype": "Link",
    "label": "Course Name",
-   "options": "Course",
-   "read_only": 1
+   "options": "Course"
   },
   {
    "fieldname": "enrollment_status",
    "fieldtype": "Select",
    "hidden": 1,
    "label": "Enrollment Status",
-   "options": "\nDraft\nActive\nInactive\nRevoked\nRefunded\nCourse Completed",
-   "read_only": 1
+   "options": "\nDraft\nActive\nInactive\nRevoked\nRefunded\nCourse Completed"
   },
   {
    "fieldname": "onboarding_tab",
@@ -168,7 +167,7 @@
    "label": "Events"
   },
   {
-   "fetch_from": "admission_id.net_total",
+   "fetch_from": "course_name.course_fee",
    "fieldname": "course_fee",
    "fieldtype": "Currency",
    "label": "Actual Course Fee",
@@ -247,15 +246,22 @@
    "fetch_from": "admission_id.grand_total_in_inr",
    "fieldname": "net_total",
    "fieldtype": "Currency",
+   "hidden": 1,
    "label": "Net Total",
-   "precision": "2",
-   "read_only": 1
+   "precision": "2"
   },
   {
    "fieldname": "educator",
    "fieldtype": "Link",
    "label": "Educator",
    "options": "Educator"
+  },
+  {
+   "fetch_from": "course_name.course_duration",
+   "fieldname": "course_duration",
+   "fieldtype": "Data",
+   "label": "Course Duration",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
@@ -266,7 +272,7 @@
    "link_fieldname": "enrollment_id"
   }
  ],
- "modified": "2024-11-21 12:42:03.867595",
+ "modified": "2024-11-21 21:11:10.113606",
  "modified_by": "Administrator",
  "module": "WLC LMS",
  "name": "Student Enrollment",
