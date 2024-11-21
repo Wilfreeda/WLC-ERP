@@ -1,0 +1,293 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-11-19 10:14:33.406589",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "date_time",
+  "enrollment_date",
+  "activation_date",
+  "logo",
+  "date",
+  "column_break_nork",
+  "admission_id",
+  "course_name",
+  "course_fee",
+  "net_total",
+  "column_break_lshw",
+  "student_id",
+  "student_name",
+  "mobile_no",
+  "email_address",
+  "enrollment_status",
+  "section_break_iugm",
+  "upi_details",
+  "upi_id",
+  "banking_name",
+  "branch_name",
+  "column_break_avvk",
+  "bank_name",
+  "account_number",
+  "ifsc",
+  "onboarding_tab",
+  "start_date",
+  "educator",
+  "onboarding_checklist_section",
+  "student_access_provided",
+  "access_to_mobile_app",
+  "notes_section",
+  "small_text_qzqg",
+  "naming_series",
+  "events_tab"
+ ],
+ "fields": [
+  {
+   "default": "Now",
+   "fieldname": "date_time",
+   "fieldtype": "Datetime",
+   "label": "Created Date & Time"
+  },
+  {
+   "fieldname": "enrollment_date",
+   "fieldtype": "Date",
+   "label": "Enrollment Date"
+  },
+  {
+   "fieldname": "activation_date",
+   "fieldtype": "Date",
+   "label": "Activation Date"
+  },
+  {
+   "fieldname": "column_break_nork",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "admission_id.student_id",
+   "fieldname": "student_id",
+   "fieldtype": "Link",
+   "label": "Student ID",
+   "options": "Student",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "student_id.full_name",
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "label": "Student Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "student_id.mobile_no",
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "label": "Mobile No.",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "student_id.email",
+   "fieldname": "email_address",
+   "fieldtype": "Data",
+   "label": "Email Address",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_lshw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "admission_id",
+   "fieldtype": "Link",
+   "label": "Admission ID",
+   "options": "Student Admission"
+  },
+  {
+   "fetch_from": "admission_id.product_id",
+   "fieldname": "course_name",
+   "fieldtype": "Link",
+   "label": "Course Name",
+   "options": "Course",
+   "read_only": 1
+  },
+  {
+   "fieldname": "enrollment_status",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Enrollment Status",
+   "options": "\nDraft\nActive\nInactive\nRevoked\nRefunded\nCourse Completed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "onboarding_tab",
+   "fieldtype": "Tab Break",
+   "label": "Onboarding"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "onboarding_checklist_section",
+   "fieldtype": "Section Break",
+   "label": "Onboarding Checklist"
+  },
+  {
+   "default": "0",
+   "fieldname": "student_access_provided",
+   "fieldtype": "Check",
+   "label": "Student Access Provided"
+  },
+  {
+   "default": "0",
+   "fieldname": "access_to_mobile_app",
+   "fieldtype": "Check",
+   "label": "Access to mobile app"
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "small_text_qzqg",
+   "fieldtype": "Small Text"
+  },
+  {
+   "default": "WLC-STD-ENR-.MM..YY.-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "WLC-STD-ENR-.MM..YY.-.#####"
+  },
+  {
+   "fieldname": "events_tab",
+   "fieldtype": "Tab Break",
+   "label": "Events"
+  },
+  {
+   "fetch_from": "admission_id.net_total",
+   "fieldname": "course_fee",
+   "fieldtype": "Currency",
+   "label": "Actual Course Fee",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_iugm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "upi_details",
+   "fieldtype": "Link",
+   "label": "UPI Details",
+   "options": "WLC UPI"
+  },
+  {
+   "fetch_from": "upi_details.upi_id",
+   "fieldname": "upi_id",
+   "fieldtype": "Data",
+   "label": "UPI ID",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "upi_details.banking_name",
+   "fieldname": "banking_name",
+   "fieldtype": "Data",
+   "label": "Banking Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_avvk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "upi_details.bank_name",
+   "fieldname": "bank_name",
+   "fieldtype": "Data",
+   "label": "Bank Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "upi_details.account_number",
+   "fieldname": "account_number",
+   "fieldtype": "Data",
+   "label": "Account Number",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "upi_details.ifsc",
+   "fieldname": "ifsc",
+   "fieldtype": "Data",
+   "label": "IFSC",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "upi_details.branch_name",
+   "fieldname": "branch_name",
+   "fieldtype": "Data",
+   "label": "Branch Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "logo",
+   "fieldtype": "Attach Image",
+   "label": "logo",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "Date"
+  },
+  {
+   "fetch_from": "admission_id.grand_total_in_inr",
+   "fieldname": "net_total",
+   "fieldtype": "Currency",
+   "label": "Net Total",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "educator",
+   "fieldtype": "Link",
+   "label": "Educator",
+   "options": "Educator"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "group": "Class Schedule",
+   "link_doctype": "Class Schedule",
+   "link_fieldname": "enrollment_id"
+  }
+ ],
+ "modified": "2024-11-21 12:42:03.867595",
+ "modified_by": "Administrator",
+ "module": "WLC LMS",
+ "name": "Student Enrollment",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

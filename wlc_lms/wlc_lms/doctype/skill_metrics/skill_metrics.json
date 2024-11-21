@@ -1,0 +1,57 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-14 16:22:58.649730",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "metric_type",
+  "current_score_out_of_10",
+  "training_suggested",
+  "improved_score"
+ ],
+ "fields": [
+  {
+   "fieldname": "metric_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Metric Type",
+   "options": "Exam Demand\nContent Quality",
+   "read_only": 1
+  },
+  {
+   "fieldname": "current_score_out_of_10",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Current Score (out of 10)",
+   "non_negative": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "training_suggested",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Training Suggested"
+  },
+  {
+   "fieldname": "improved_score",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Improved Score",
+   "non_negative": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-11-14 16:25:21.550411",
+ "modified_by": "Administrator",
+ "module": "WLC LMS",
+ "name": "Skill Metrics",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

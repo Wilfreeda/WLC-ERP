@@ -1,0 +1,361 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-11-18 10:13:39.152212",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "via_online",
+  "column_break_ovbv",
+  "via_sales",
+  "column_break_hsml",
+  "walk_in",
+  "section_break_kroo",
+  "date_time",
+  "date",
+  "time",
+  "edit_datetime",
+  "column_break_mcnr",
+  "student_id",
+  "student_name",
+  "mobile_number",
+  "email",
+  "section_break_jivr",
+  "product_id",
+  "prodcut_name",
+  "column_break_sgng",
+  "payment_type",
+  "product_fee",
+  "section_break_koal",
+  "column_break_iizq",
+  "column_break_xvib",
+  "net_total",
+  "section_break_qolz",
+  "provide_discounts",
+  "discount_type",
+  "column_break_lxcz",
+  "discount",
+  "section_break_hxfp",
+  "column_break_bbtx",
+  "column_break_bbcw",
+  "grand_total_in_inr",
+  "grand_total_in_words_inr",
+  "tab_2_tab",
+  "naming_series",
+  "payment_status",
+  "column_break_qehx",
+  "inatallment_count",
+  "section_break_hemb",
+  "paid_amount",
+  "column_break_xdsq",
+  "balance_amount",
+  "transactions_section",
+  "table_yvgl",
+  "tab_3_tab",
+  "admission_events"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "via_online",
+   "fieldtype": "Check",
+   "label": "Via Online"
+  },
+  {
+   "fieldname": "column_break_ovbv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "via_sales",
+   "fieldtype": "Check",
+   "label": "Via Sales"
+  },
+  {
+   "fieldname": "column_break_hsml",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "walk_in",
+   "fieldtype": "Check",
+   "label": "Walk In"
+  },
+  {
+   "fieldname": "section_break_kroo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "date_time",
+   "fieldtype": "Datetime",
+   "hidden": 1,
+   "label": "Date & Time",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "read_only": 1,
+   "read_only_depends_on": "eval:doc.edit_datetime == 0",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_mcnr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "student_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Student ID",
+   "options": "Student",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "student_id.full_name",
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "label": "Student Name",
+   "read_only": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fetch_from": "student_id.mobile_no",
+   "fieldname": "mobile_number",
+   "fieldtype": "Data",
+   "label": "Mobile Number",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "edit_datetime",
+   "fieldtype": "Check",
+   "label": "Edit Date and Time"
+  },
+  {
+   "fieldname": "section_break_jivr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "product_id",
+   "fieldtype": "Link",
+   "label": "Course ID",
+   "options": "Course",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "product_id.course_title",
+   "fieldname": "prodcut_name",
+   "fieldtype": "Data",
+   "label": "Course Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_type",
+   "fieldtype": "Select",
+   "label": "Payment Type",
+   "options": "\nSingle Payment\nMultiple Payment",
+   "reqd": 1
+  },
+  {
+   "default": "0.0",
+   "fetch_from": "product_id.course_fee",
+   "fieldname": "product_fee",
+   "fieldtype": "Currency",
+   "label": "Product Fee (in INR)"
+  },
+  {
+   "fieldname": "column_break_sgng",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_koal",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_iizq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_xvib",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0.0",
+   "fieldname": "net_total",
+   "fieldtype": "Currency",
+   "label": "Net Total",
+   "precision": "2"
+  },
+  {
+   "fieldname": "section_break_qolz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "provide_discounts",
+   "fieldtype": "Check",
+   "label": "Provide Discounts"
+  },
+  {
+   "depends_on": "eval:doc.provide_discounts == 1",
+   "fieldname": "discount_type",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Discount Type"
+  },
+  {
+   "fieldname": "column_break_lxcz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_hxfp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_bbtx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_bbcw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "grand_total_in_inr",
+   "fieldtype": "Currency",
+   "label": "Grand Total (in INR)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "grand_total_in_words_inr",
+   "fieldtype": "Data",
+   "label": "Grand Total in Words (INR)",
+   "mandatory_depends_on": "eval:doc.provide_discounts",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tab_2_tab",
+   "fieldtype": "Tab Break",
+   "label": "Payment Details"
+  },
+  {
+   "default": "STD-ADM-WLC-.MM..YY.-.######",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "STD-ADM-WLC-.MM..YY.-.######",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "label": "Payment Status",
+   "options": "Not Paid\nPartial Paid\nFully Paid",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_qehx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.payment_type == \"Multiple Payments\"",
+   "fieldname": "inatallment_count",
+   "fieldtype": "Select",
+   "label": "Inatallment Count",
+   "options": "\n2\n3\n4"
+  },
+  {
+   "fieldname": "section_break_hemb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0.0",
+   "fieldname": "paid_amount",
+   "fieldtype": "Currency",
+   "label": "Paid Amount",
+   "precision": "2"
+  },
+  {
+   "fieldname": "column_break_xdsq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0.0",
+   "fieldname": "balance_amount",
+   "fieldtype": "Currency",
+   "label": "Balance Amount",
+   "precision": "2"
+  },
+  {
+   "fieldname": "transactions_section",
+   "fieldtype": "Section Break",
+   "label": "Transactions"
+  },
+  {
+   "fieldname": "table_yvgl",
+   "fieldtype": "Table",
+   "options": "Student Payment Table"
+  },
+  {
+   "fieldname": "tab_3_tab",
+   "fieldtype": "Tab Break",
+   "label": "Events"
+  },
+  {
+   "fieldname": "admission_events",
+   "fieldtype": "Table",
+   "label": "Admission Events",
+   "options": "Admission Events"
+  },
+  {
+   "fetch_from": "student_id.email",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "default": "0.0",
+   "depends_on": "eval:doc.provide_discounts",
+   "fieldname": "discount",
+   "fieldtype": "Currency",
+   "label": "Discount Amount (in INR)",
+   "precision": "2"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-19 14:52:19.521507",
+ "modified_by": "Administrator",
+ "module": "WLC LMS",
+ "name": "Student Admission",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
