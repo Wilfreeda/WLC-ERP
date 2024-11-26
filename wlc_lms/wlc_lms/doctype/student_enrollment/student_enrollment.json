@@ -244,7 +244,6 @@
    "label": "Date"
   },
   {
-   "fetch_from": "admission_id.grand_total_in_inr",
    "fieldname": "net_total",
    "fieldtype": "Currency",
    "hidden": 1,
@@ -258,11 +257,9 @@
    "options": "Educator"
   },
   {
-   "fetch_from": "course_name.course_duration",
    "fieldname": "course_duration",
    "fieldtype": "Data",
-   "label": "Course Duration",
-   "read_only": 1
+   "label": "Course Duration"
   },
   {
    "fetch_from": "educator.full_name",
@@ -280,7 +277,7 @@
    "link_fieldname": "enrollment_id"
   }
  ],
- "modified": "2024-11-21 21:24:00.931058",
+ "modified": "2024-11-26 11:47:00.024130",
  "modified_by": "Administrator",
  "module": "WLC LMS",
  "name": "Student Enrollment",

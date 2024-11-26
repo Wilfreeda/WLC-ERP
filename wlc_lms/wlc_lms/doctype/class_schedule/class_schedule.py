@@ -13,11 +13,10 @@ class ClassSchedule(Document):
 		# self.set_title()
 
 	def set_date_time(self):
-		start = datetime.strptime(self.class_from, "%Y-%m-%d %H:%M:%S")
-		to = datetime.strptime(self.class_to, "%Y-%m-%d %H:%M:%S")
 
-		duration = to - start
+		from_time = datetime.strptime(self.from_time, '%H:%M:%S')
+		to_time = datetime.strptime(self.to_time, '%H:%M:%S')
 
-		hours = duration.total_seconds()
+		duration = (to_time - from_time).total_seconds()
 
-		self.duration = hours
+		self.duration = duration

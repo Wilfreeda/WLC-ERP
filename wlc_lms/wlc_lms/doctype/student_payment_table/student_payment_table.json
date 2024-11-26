@@ -53,9 +53,7 @@
    "columns": 2,
    "fieldname": "fee_payment_id",
    "fieldtype": "Data",
-   "label": "Fee Payment ID",
-   "read_only": 1,
-   "reqd": 1
+   "label": "Fee Payment ID"
   },
   {
    "default": "0",
@@ -67,7 +65,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-11-18 11:59:17.452213",
+ "modified": "2024-11-26 12:13:13.625157",
  "modified_by": "Administrator",
  "module": "WLC LMS",
  "name": "Student Payment Table",

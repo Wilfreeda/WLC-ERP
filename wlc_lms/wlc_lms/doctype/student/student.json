@@ -40,6 +40,7 @@
   {
    "fieldname": "full_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Full Name"
   },
   {
@@ -102,7 +103,7 @@
  "image_field": "image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-11 13:45:31.632141",
+ "modified": "2024-11-25 23:27:47.580901",
  "modified_by": "Administrator",
  "module": "WLC LMS",
  "name": "Student",

@@ -2,6 +2,8 @@
 
 import frappe
 from frappe.auth import get_logged_user
+from frappe.utils import getdate
+from datetime import datetime
 
 @frappe.whitelist()
 def get_enrollments():
@@ -57,6 +59,8 @@ def get_enrollment(enrollment_id):
     lms_settings = frappe.get_doc("WLC LMS Settings")
     default_logo = str(lms_settings.hostname) + str(lms_settings.default_image)
 
+    today = getdate()
+
     token_user = get_logged_user()
     student = frappe.get_doc("Student", {"email": token_user})
     doc = frappe.get_doc('Student', student.name)
@@ -65,12 +69,55 @@ def get_enrollment(enrollment_id):
 
     class_schedules = frappe.get_all('Class Schedule', filters={'enrollment_id': enrollment.name, 'class_status': "Scheduled"})
 
+    todays_activity = []
+
+    for class_schedule in class_schedules:
+        class_schedule = frappe.get_doc('Class Schedule', class_schedule.name)
+
+        activity_name = ""
+        if class_schedule.schedules_topics:
+            for topics in class_schedule.schedules_topics:
+                activity_name = str(topics.sub_course) + " - " + str(topics.topic)
+
+        trainer = class_schedule.educator_name
+
+        date_obj = datetime.strptime(str(class_schedule.class_date), '%Y-%m-%d')
+        formatted_date = date_obj.strftime('%d %b')
+
+        from_time_obj = datetime.strptime(str(class_schedule.from_time), '%H:%M:%S')
+        formatted_from_time = from_time_obj.strftime('%I%p').lower()
+
+        to_time_obj = datetime.strptime(str(class_schedule.to_time), '%H:%M:%S')
+        formatted_to_time = to_time_obj.strftime('%I%p').lower()
+
+
+        time = '(' + formatted_from_time + ' - ' + formatted_to_time + ' IST)'
+
+        sch = str(formatted_date) + " " + str(time)
+
+        if class_schedule.class_status == "Scheduled" and class_schedule.class_date == today:
+            todays_activity.append({
+                'class_date': class_schedule.class_date,
+                'activity': activity_name,
+                "trainer": trainer,
+                "schedule": sch,
+                'duration': str(class_schedule.duration / 3600) + str(" Hrs."),
+                'class_status': class_schedule.class_status,
+                'class_link': class_schedule.class_link
+            })
+
+        past_schedules = frappe.get_all('Class Schedule', filters={'enrollment_id': enrollment.name, 'class_status': "Class Completed"})
+
+        past_schedule = []
+        for pSchedules in past_schedules:
+            pass
+
     frappe.response['messages'] = {
         'status': 1,
         'message': 'Class schedules fetched successfully',
-        'class_schedules': class_schedules,
+        'past_schedules': past_schedules,
+        'todays_activity': todays_activity,
         # 'enrollment': enrollment,
         # 'course_image': default_logo
     }
 
-    

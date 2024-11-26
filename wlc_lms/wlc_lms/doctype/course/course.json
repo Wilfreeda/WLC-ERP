@@ -24,6 +24,7 @@
   "skills",
   "section_break_lmwc",
   "course_description",
+  "long_description",
   "why",
   "reasons",
   "course_items_section",
@@ -65,6 +66,7 @@
   {
    "fieldname": "course_duration",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Course Duration"
   },
   {
@@ -157,11 +159,16 @@
    "fieldtype": "Currency",
    "label": "Course Fee",
    "precision": "2"
+  },
+  {
+   "fieldname": "long_description",
+   "fieldtype": "Small Text",
+   "label": "Long Description"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-19 14:55:38.163200",
+ "modified": "2024-11-26 11:44:44.238847",
  "modified_by": "Administrator",
  "module": "WLC LMS",
  "name": "Course",

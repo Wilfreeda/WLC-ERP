@@ -21,9 +21,13 @@
   "student_name",
   "mobile_number",
   "email",
+  "column_break_tmob",
+  "student_enrollment_id",
+  "course_id",
   "section_break_jivr",
-  "product_id",
-  "prodcut_name",
+  "course_item_id",
+  "course_fee",
+  "duration",
   "column_break_sgng",
   "payment_type",
   "product_fee",
@@ -51,7 +55,7 @@
   "column_break_xdsq",
   "balance_amount",
   "transactions_section",
-  "table_yvgl",
+  "table_transactions",
   "tab_3_tab",
   "admission_events"
  ],
@@ -146,20 +150,6 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "product_id",
-   "fieldtype": "Link",
-   "label": "Course ID",
-   "options": "Course",
-   "reqd": 1
-  },
-  {
-   "fetch_from": "product_id.course_title",
-   "fieldname": "prodcut_name",
-   "fieldtype": "Data",
-   "label": "Course Name",
-   "read_only": 1
-  },
-  {
    "fieldname": "payment_type",
    "fieldtype": "Select",
    "label": "Payment Type",
@@ -191,6 +181,7 @@
   },
   {
    "default": "0.0",
+   "fetch_from": "course_item_id.course_fee",
    "fieldname": "net_total",
    "fieldtype": "Currency",
    "label": "Net Total",
@@ -268,11 +259,11 @@
    "fieldtype": "Column Break"
   },
   {
-   "depends_on": "eval:doc.payment_type == \"Multiple Payments\"",
+   "depends_on": "eval:doc.payment_type == \"Multiple Payment\"",
    "fieldname": "inatallment_count",
    "fieldtype": "Select",
    "label": "Inatallment Count",
-   "options": "\n2\n3\n4"
+   "options": "1\n2\n3\n4"
   },
   {
    "fieldname": "section_break_hemb",
@@ -302,11 +293,6 @@
    "label": "Transactions"
   },
   {
-   "fieldname": "table_yvgl",
-   "fieldtype": "Table",
-   "options": "Student Payment Table"
-  },
-  {
    "fieldname": "tab_3_tab",
    "fieldtype": "Tab Break",
    "label": "Events"
@@ -330,11 +316,53 @@
    "fieldtype": "Currency",
    "label": "Discount Amount (in INR)",
    "precision": "2"
+  },
+  {
+   "fieldname": "column_break_tmob",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "student_enrollment_id",
+   "fieldtype": "Link",
+   "label": "Student Enrollment ID",
+   "options": "Student Enrollment"
+  },
+  {
+   "fetch_from": "student_enrollment_id.course_name",
+   "fieldname": "course_id",
+   "fieldtype": "Link",
+   "label": "Course ID",
+   "options": "Course",
+   "read_only": 1
+  },
+  {
+   "fieldname": "course_item_id",
+   "fieldtype": "Link",
+   "label": "Course Item ID",
+   "options": "Course Item",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "course_item_id.course_fee",
+   "fieldname": "course_fee",
+   "fieldtype": "Currency",
+   "label": "Course Fee",
+   "precision": "2"
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Data",
+   "label": "Duration"
+  },
+  {
+   "fieldname": "table_transactions",
+   "fieldtype": "Table",
+   "options": "Student Payment Table"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-19 14:52:19.521507",
+ "modified": "2024-11-26 14:15:15.268058",
  "modified_by": "Administrator",
  "module": "WLC LMS",
  "name": "Student Admission",

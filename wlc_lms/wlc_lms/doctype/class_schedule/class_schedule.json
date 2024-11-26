@@ -14,8 +14,9 @@
   "class_status",
   "title",
   "section_break_pgeo",
-  "class_from",
-  "class_to",
+  "class_date",
+  "from_time",
+  "to_time",
   "duration",
   "schedule_type",
   "column_break_hddg",
@@ -76,16 +77,6 @@
   {
    "fieldname": "section_break_pgeo",
    "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "class_from",
-   "fieldtype": "Datetime",
-   "label": "Class From"
-  },
-  {
-   "fieldname": "class_to",
-   "fieldtype": "Datetime",
-   "label": "Class To"
   },
   {
    "fieldname": "duration",
@@ -200,12 +191,27 @@
    "fieldtype": "Link",
    "label": "Enrollment ID",
    "options": "Student Enrollment"
+  },
+  {
+   "fieldname": "class_date",
+   "fieldtype": "Date",
+   "label": "Class Date"
+  },
+  {
+   "fieldname": "from_time",
+   "fieldtype": "Time",
+   "label": "From Time"
+  },
+  {
+   "fieldname": "to_time",
+   "fieldtype": "Time",
+   "label": "To Time"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_calendar_and_gantt": 1,
  "links": [],
- "modified": "2024-11-21 12:42:50.686866",
+ "modified": "2024-11-23 15:05:50.620200",
  "modified_by": "Administrator",
  "module": "WLC LMS",
  "name": "Class Schedule",

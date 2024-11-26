@@ -1,0 +1,111 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-26 11:47:36.210161",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "enabled",
+  "section_break_heud",
+  "course",
+  "course_item_name",
+  "course_fee",
+  "section_break_vrdm",
+  "by_hour",
+  "duration_in_days",
+  "duration_in_hour",
+  "column_break_wvxm",
+  "by_days"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "section_break_heud",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "course",
+   "fieldtype": "Link",
+   "label": "Course",
+   "options": "Course"
+  },
+  {
+   "fieldname": "course_item_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Course Item Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "course_fee",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Course Fee",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_vrdm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "by_hour",
+   "fieldtype": "Check",
+   "label": "By Hour"
+  },
+  {
+   "depends_on": "eval:doc.by_days == 1",
+   "fieldname": "duration_in_days",
+   "fieldtype": "Data",
+   "label": "Duration (in Days)",
+   "mandatory_depends_on": "eval:doc.by_days == 1"
+  },
+  {
+   "depends_on": "eval:doc.by_hour == 1",
+   "fieldname": "duration_in_hour",
+   "fieldtype": "Data",
+   "label": "Duration (in Hour)",
+   "mandatory_depends_on": "eval:doc.by_hour == 1"
+  },
+  {
+   "fieldname": "column_break_wvxm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "by_days",
+   "fieldtype": "Check",
+   "label": "By Days"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-26 11:53:40.778302",
+ "modified_by": "Administrator",
+ "module": "WLC LMS",
+ "name": "Course Item",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

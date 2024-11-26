@@ -18,6 +18,11 @@ from frappe.utils.password import get_decrypted_password
 
 @frappe.whitelist(allow_guest=True)
 def sign_in(username, password):
+
+    lms_settings = frappe.get_doc("WLC LMS Settings")
+    default_logo = str(lms_settings.hostname) + str(lms_settings.default_image)
+
+
     try:
         login_manager = LoginManager()
         login_manager.authenticate(user=username, pwd=password)
@@ -56,7 +61,7 @@ def sign_in(username, password):
         
         profile_pic = ""
         if user.user_image:
-            profile_pic = 'http://localhost:8000' + str(frappe.utils.get_files_path(user.user_image))
+            profile_pic = str(lms_settings.hostname) + str(frappe.utils.get_files_path(user.user_image))
         
         frappe.clear_messages()
         frappe.response["message"] = {
@@ -227,3 +232,8 @@ def sign_up(email, mobile_no, password, first_name, last_name, gender, birth_dat
                 "message": "User registered successfully."
             }
             
+
+@frappe.whitelist()
+def init():
+    lms_settings = frappe.get_doc("WLC LMS Settings")
+    default_logo = str(lms_settings.hostname) + str(lms_settings.default_image)
