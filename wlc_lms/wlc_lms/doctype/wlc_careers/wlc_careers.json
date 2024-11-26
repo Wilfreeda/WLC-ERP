@@ -8,16 +8,18 @@
  "field_order": [
   "applicant_name",
   "email",
+  "mobile_no",
   "applying_for",
-  "address",
   "column_break_tvgc",
   "relavent_educational_qualification",
-  "same_as_addr",
+  "address",
   "permanant_address",
+  "addr_same",
   "documents_section",
   "photo",
   "aadhaar_card",
-  "educational_certificate"
+  "educational_certificate",
+  "10th_standard_certificate"
  ],
  "fields": [
   {
@@ -34,14 +36,15 @@
   },
   {
    "fieldname": "applying_for",
-   "fieldtype": "Data",
+   "fieldtype": "Select",
    "in_list_view": 1,
-   "label": "Applying For"
+   "label": "Applying For",
+   "options": "\nIELTS\nGERMAN\nENGLISH\nBUSINESS ENGLISH"
   },
   {
    "fieldname": "address",
    "fieldtype": "Small Text",
-   "label": "Communication Address"
+   "label": "Current Address"
   },
   {
    "fieldname": "column_break_tvgc",
@@ -55,8 +58,7 @@
   {
    "fieldname": "permanant_address",
    "fieldtype": "Small Text",
-   "label": "Permanant Address",
-   "read_only_depends_on": "eval:doc.same_as_addr == 1"
+   "label": "Permanant Address"
   },
   {
    "fieldname": "documents_section",
@@ -66,7 +68,7 @@
   {
    "fieldname": "photo",
    "fieldtype": "Attach",
-   "label": "Photo"
+   "label": "Passport Size Photo"
   },
   {
    "fieldname": "aadhaar_card",
@@ -76,18 +78,28 @@
   {
    "fieldname": "educational_certificate",
    "fieldtype": "Attach",
-   "label": "Educational Certificate"
+   "label": "Highest Qualification Certificate"
+  },
+  {
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "label": "Mobile No."
   },
   {
    "default": "0",
-   "fieldname": "same_as_addr",
+   "fieldname": "addr_same",
    "fieldtype": "Check",
-   "label": "Same as communication address"
+   "label": "Permanant Address is same as Current Address"
+  },
+  {
+   "fieldname": "10th_standard_certificate",
+   "fieldtype": "Attach",
+   "label": "10th Standard Certificate"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-26 21:48:04.176757",
+ "modified": "2024-11-26 22:13:57.844557",
  "modified_by": "Administrator",
  "module": "WLC LMS",
  "name": "WLC Careers",
