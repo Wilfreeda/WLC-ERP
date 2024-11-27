@@ -25,7 +25,7 @@
   "ielts_preparation_section",
   "is_ielts_booked",
   "column_break_kauw",
-  "is_taking_ielts_with_us",
+  "having_passport",
   "personal_interests_section",
   "primary_interests",
   "column_break_bhcl",
@@ -132,12 +132,6 @@
    "options": "\nYes\nNo"
   },
   {
-   "fieldname": "is_taking_ielts_with_us",
-   "fieldtype": "Select",
-   "label": "Are you taking IELTS preparation with us?",
-   "options": "\nYes\nNo"
-  },
-  {
    "fieldname": "personal_interests_section",
    "fieldtype": "Section Break",
    "label": "Personal Interests"
@@ -216,11 +210,17 @@
    "fieldname": "profession",
    "fieldtype": "Data",
    "label": "Profession"
+  },
+  {
+   "fieldname": "having_passport",
+   "fieldtype": "Select",
+   "label": "Do you have a passport",
+   "options": "\nYes\nNo"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-27 16:07:37.824565",
+ "modified": "2024-11-27 16:59:30.228407",
  "modified_by": "Administrator",
  "module": "WLC LMS",
  "name": "WLC Student Intake",
