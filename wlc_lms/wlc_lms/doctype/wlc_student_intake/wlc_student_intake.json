@@ -1,0 +1,246 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "WLC-STD-INTAKE-.#####",
+ "creation": "2024-11-27 12:20:25.905782",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "personal_details_section",
+  "full_name",
+  "age",
+  "gender",
+  "date_of_birth",
+  "profession",
+  "column_break_ecld",
+  "contact_number",
+  "email_address",
+  "address",
+  "course_details_section",
+  "course_name",
+  "course_level_or_type",
+  "column_break_thyu",
+  "start_date",
+  "end_date",
+  "ielts_preparation_section",
+  "is_ielts_booked",
+  "column_break_kauw",
+  "is_taking_ielts_with_us",
+  "personal_interests_section",
+  "primary_interests",
+  "column_break_bhcl",
+  "other_interest",
+  "course_goals_section",
+  "goal_heading",
+  "language_proficiency",
+  "academic_preparation",
+  "professional_skills",
+  "travel_abroad",
+  "personal_interest",
+  "additional_infromation_section",
+  "add_goals"
+ ],
+ "fields": [
+  {
+   "fieldname": "personal_details_section",
+   "fieldtype": "Section Break",
+   "label": "Personal Details"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "Gender",
+   "options": "Gender"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "column_break_ecld",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contact_number",
+   "fieldtype": "Data",
+   "label": "Contact Number"
+  },
+  {
+   "fieldname": "email_address",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email Address"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "course_details_section",
+   "fieldtype": "Section Break",
+   "label": "Course Details"
+  },
+  {
+   "fieldname": "course_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Course Name",
+   "options": "Course"
+  },
+  {
+   "fieldname": "course_level_or_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Course Level or Type"
+  },
+  {
+   "fieldname": "column_break_thyu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "ielts_preparation_section",
+   "fieldtype": "Section Break",
+   "label": "IELTS Preparation"
+  },
+  {
+   "fieldname": "is_ielts_booked",
+   "fieldtype": "Select",
+   "label": "Have you already booked a slot for the IELTS exam?",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "is_taking_ielts_with_us",
+   "fieldtype": "Select",
+   "label": "Are you taking IELTS preparation with us?",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "personal_interests_section",
+   "fieldtype": "Section Break",
+   "label": "Personal Interests"
+  },
+  {
+   "fieldname": "primary_interests",
+   "fieldtype": "Select",
+   "label": "Primary Interests",
+   "options": "\nTechnology\nArts and Culture\nSports\nBusiness and Finance\nTravel\nOther (Please specify)"
+  },
+  {
+   "depends_on": "eval:doc.primary_interests == \"Other (Please specify)\"",
+   "fieldname": "other_interest",
+   "fieldtype": "Data",
+   "label": "Other Interest"
+  },
+  {
+   "fieldname": "column_break_kauw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_bhcl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "course_goals_section",
+   "fieldtype": "Section Break",
+   "label": "Course Goals"
+  },
+  {
+   "fieldname": "goal_heading",
+   "fieldtype": "Heading",
+   "label": "What is your primary goal for this course? (Please select all that apply)"
+  },
+  {
+   "default": "0",
+   "fieldname": "language_proficiency",
+   "fieldtype": "Check",
+   "label": "Improve overall language proficiency"
+  },
+  {
+   "default": "0",
+   "fieldname": "academic_preparation",
+   "fieldtype": "Check",
+   "label": "Prepare for academic studies"
+  },
+  {
+   "default": "0",
+   "fieldname": "professional_skills",
+   "fieldtype": "Check",
+   "label": "Enhance professional skills"
+  },
+  {
+   "default": "0",
+   "fieldname": "travel_abroad",
+   "fieldtype": "Check",
+   "label": "Travel abroad"
+  },
+  {
+   "default": "0",
+   "fieldname": "personal_interest",
+   "fieldtype": "Check",
+   "label": "Personal interest"
+  },
+  {
+   "fieldname": "additional_infromation_section",
+   "fieldtype": "Section Break",
+   "label": "Additional Infromation"
+  },
+  {
+   "fieldname": "add_goals",
+   "fieldtype": "Small Text",
+   "label": "Any specific learning goals or challenges you'd like to address:"
+  },
+  {
+   "fieldname": "profession",
+   "fieldtype": "Data",
+   "label": "Profession"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-27 16:07:37.824565",
+ "modified_by": "Administrator",
+ "module": "WLC LMS",
+ "name": "WLC Student Intake",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

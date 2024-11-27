@@ -29,6 +29,8 @@
   "reasons",
   "course_items_section",
   "topic_table",
+  "course_level_section",
+  "levels",
   "course_statistics_section",
   "total_topics"
  ],
@@ -164,11 +166,22 @@
    "fieldname": "long_description",
    "fieldtype": "Small Text",
    "label": "Long Description"
+  },
+  {
+   "fieldname": "course_level_section",
+   "fieldtype": "Section Break",
+   "label": "Course Level"
+  },
+  {
+   "fieldname": "levels",
+   "fieldtype": "Table",
+   "label": "Levels",
+   "options": "Course Level"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-26 11:44:44.238847",
+ "modified": "2024-11-27 12:40:06.572890",
  "modified_by": "Administrator",
  "module": "WLC LMS",
  "name": "Course",

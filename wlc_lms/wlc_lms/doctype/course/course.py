@@ -102,3 +102,6 @@ def get_course_details(course_id):
         'status': 1,
         'course': course
     }
+
+
+
