@@ -46,7 +46,7 @@ def set_student_status():
     # update the status of students daily
     student_list = frappe.get_all('Student', fields=['name', 'enrollment_status'])
     for student in student_list:
-        enroll_list = frappe.get_all('Enrollment', filters={'student_id': student.name, 'enrollment_status': 'Actuve'})
+        enroll_list = frappe.get_all('Enrollment', filters={'student_id': student.name, 'enrollment_status': 'Active'})
         if enroll_list:
             frappe.db.set_value('Student', student.name, 'enrollment_status', 'Paid', update_modified=False)
             frappe.db.commit()

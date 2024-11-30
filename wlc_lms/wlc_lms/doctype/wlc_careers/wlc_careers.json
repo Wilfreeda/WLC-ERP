@@ -99,7 +99,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-29 17:31:29.260170",
+ "modified": "2024-11-29 17:53:05.256006",
  "modified_by": "Administrator",
  "module": "WLC LMS",
  "name": "WLC Careers",
@@ -151,6 +151,7 @@
    "read": 1,
    "report": 1,
    "role": "Guest",
+   "select": 1,
    "share": 1,
    "write": 1
   }

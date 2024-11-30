@@ -6,7 +6,7 @@ frappe.ui.form.on("Student", {
         if (frm.doc.student_status != 'Disabled') {
             frm.add_custom_button(__('Disable'), () => {
                 frappe.confirm('Disable this student' , () => {
-                    frm.set_value('student_status', 'Disable')
+                    frm.set_value('student_status', 'Disabled')
                     frm.save()
                     .then(() => {
                         frappe.msgprint({
