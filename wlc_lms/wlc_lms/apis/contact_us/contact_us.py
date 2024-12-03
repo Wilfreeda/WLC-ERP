@@ -5,7 +5,6 @@ from frappe.utils import escape_html, now
 @frappe.whitelist(allow_guest=True)
 def submit_enquiry(name, email, msg):
 
-    print(f'\n\n\n\n{name}, {email}, {msg}\n\n\n')
     inqury = frappe.get_doc({
         'doctype': 'WLC Enquires',
         'name1': escape_html(name),
@@ -16,3 +15,8 @@ def submit_enquiry(name, email, msg):
     inqury.flags.ignore_permissions = True
     inqury.save()
     frappe.db.commit()
+
+    frappe.response['messages'] = {
+        'status': 1,
+        'message': 'Enquiry submitted successfully'
+    }

@@ -64,7 +64,7 @@ def get_course_details(course_id):
     why = {}
     if course_details.why:
         for i in course_details.why:
-            why[i.title] = i.details
+            why[i.title] = i.description
         
     reasons = {}
     if course_details.reasons:

@@ -12,6 +12,9 @@
   "default_image",
   "support_section",
   "support_number",
+  "support_email_address",
+  "column_break_qygi",
+  "whatsapp_number",
   "versions_section",
   "lms_version"
  ],
@@ -60,12 +63,27 @@
    "fieldname": "lms_version",
    "fieldtype": "Data",
    "label": "LMS Version"
+  },
+  {
+   "description": "Note: +910000000000",
+   "fieldname": "whatsapp_number",
+   "fieldtype": "Data",
+   "label": "Whatsapp Number"
+  },
+  {
+   "fieldname": "support_email_address",
+   "fieldtype": "Data",
+   "label": "Support Email Address"
+  },
+  {
+   "fieldname": "column_break_qygi",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2024-11-13 10:26:39.026241",
+ "modified": "2024-12-01 10:47:17.449911",
  "modified_by": "Administrator",
  "module": "WLC LMS",
  "name": "WLC LMS Settings",
