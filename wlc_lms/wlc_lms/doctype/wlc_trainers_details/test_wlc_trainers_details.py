@@ -12,18 +12,18 @@ EXTRA_TEST_RECORD_DEPENDENCIES = []  # eg. ["User"]
 IGNORE_TEST_RECORD_DEPENDENCIES = []  # eg. ["User"]
 
 
-class UnitTestWLCCareers(UnitTestCase):
+class UnitTestWLCTrainersDetails(UnitTestCase):
 	"""
-	Unit tests for WLCCareers.
+	Unit tests for WLCTrainersDetails.
 	Use this class for testing individual functions and methods.
 	"""
 
 	pass
 
 
-class IntegrationTestWLCCareers(IntegrationTestCase):
+class IntegrationTestWLCTrainersDetails(IntegrationTestCase):
 	"""
-	Integration tests for WLCCareers.
+	Integration tests for WLCTrainersDetails.
 	Use this class for testing interactions between multiple components.
 	"""
 

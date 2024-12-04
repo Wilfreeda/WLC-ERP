@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class WLCCareers(Document):
+class WLCTrainersDetails(Document):
 	pass
