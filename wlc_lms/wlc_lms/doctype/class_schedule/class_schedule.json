@@ -29,6 +29,8 @@
   "schedules_topics",
   "section_break_auuo",
   "class_link",
+  "column_break_vtwn",
+  "recording_link",
   "class_coverage_tab",
   "actual_topic_covered_in_the_class",
   "section_break_xypm",
@@ -64,7 +66,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Class Status",
-   "options": "Draft\nScheduled\nOpen\nClass Completed\nTasks Completed\nCancelled",
+   "options": "Draft\nScheduled\nOpen\nClass Completed\nCancelled",
    "reqd": 1
   },
   {
@@ -105,6 +107,7 @@
    "fetch_from": "enrollment_id.student_id",
    "fieldname": "student",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Student",
    "options": "Student"
   },
@@ -206,12 +209,21 @@
    "fieldname": "to_time",
    "fieldtype": "Time",
    "label": "To Time"
+  },
+  {
+   "fieldname": "column_break_vtwn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "recording_link",
+   "fieldtype": "Data",
+   "label": "Recording Link"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_calendar_and_gantt": 1,
  "links": [],
- "modified": "2024-11-23 15:05:50.620200",
+ "modified": "2024-12-06 12:29:22.583255",
  "modified_by": "Administrator",
  "module": "WLC LMS",
  "name": "Class Schedule",

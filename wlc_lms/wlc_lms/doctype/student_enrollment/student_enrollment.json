@@ -257,6 +257,7 @@
    "options": "Educator"
   },
   {
+   "description": "In hours",
    "fieldname": "course_duration",
    "fieldtype": "Data",
    "label": "Course Duration"
@@ -277,7 +278,7 @@
    "link_fieldname": "enrollment_id"
   }
  ],
- "modified": "2024-11-26 11:47:00.024130",
+ "modified": "2024-12-05 16:48:05.610043",
  "modified_by": "Administrator",
  "module": "WLC LMS",
  "name": "Student Enrollment",

@@ -106,18 +106,42 @@ def get_enrollment(enrollment_id):
                 'class_link': class_schedule.class_link
             })
 
-        past_schedules = frappe.get_all('Class Schedule', filters={'enrollment_id': enrollment.name, 'class_status': "Class Completed"})
 
-        past_schedule = []
-        for pSchedules in past_schedules:
-            pass
+    past_schedules = frappe.get_all('Class Schedule', filters={'enrollment_id': enrollment.name, 'class_status': "Class Completed"})
+
+    past_schedule = []
+    progressed_duration = 0
+    for pSchedules in past_schedules:
+        schedule = frappe.get_doc('Class Schedule', pSchedules.name)
+        if schedule.duration:
+            duration = schedule.duration / 3600
+            progressed_duration += duration
+
+        if schedule.schedules_topics:
+            for topics in schedule.schedules_topics:
+                activity_name = str(topics.sub_course) + " - " + str(topics.topic)
+
+        past_schedule.append({
+            'activity': activity_name,
+            'class_date': schedule.class_date,
+            "trainer": schedule.educator_name,
+            'class_status': schedule.class_status,
+        })
+
+    if enrollment.course_duration:
+        course_duration = int(enrollment.course_duration)
+
+    
+    progress = int((progressed_duration / course_duration) * 100)
+
+
 
     frappe.response['messages'] = {
         'status': 1,
         'message': 'Class schedules fetched successfully',
-        'past_schedules': past_schedules,
+        'past_schedules': past_schedule,
         'todays_activity': todays_activity,
+        'progress': progress
         # 'enrollment': enrollment,
         # 'course_image': default_logo
     }
-

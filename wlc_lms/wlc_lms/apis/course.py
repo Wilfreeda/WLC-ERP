@@ -15,6 +15,7 @@ def get_course_details(course_id):
     course_name = course.name
     description = course.course_description
 
+    long_description = ''
     if course.long_description:
         long_description = course.long_description
 
