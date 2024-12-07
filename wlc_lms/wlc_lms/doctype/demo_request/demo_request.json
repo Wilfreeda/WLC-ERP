@@ -12,6 +12,7 @@
   "column_break_bdkt",
   "email",
   "time_slot",
+  "selected_date",
   "response_section",
   "status",
   "feedback"
@@ -65,11 +66,16 @@
    "fieldtype": "Link",
    "label": "Course",
    "options": "Course"
+  },
+  {
+   "fieldname": "selected_date",
+   "fieldtype": "Data",
+   "label": "Selected Date"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-22 18:41:51.558938",
+ "modified": "2024-12-07 16:08:16.132278",
  "modified_by": "Administrator",
  "module": "WLC LMS",
  "name": "Demo Request",
