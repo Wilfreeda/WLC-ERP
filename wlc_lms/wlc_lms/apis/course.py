@@ -53,3 +53,33 @@ def get_course_details(course_id):
     }
 
 
+@frappe.whitelist(allow_guest=True)
+def get_course_list():
+    course_list = []
+
+    lms_settings = frappe.get_doc("WLC LMS Settings")
+    
+    courses = frappe.get_all("Course", filters={'show_on_web': 1, 'enabled': 1})
+
+    if courses:
+        for course in courses:
+            course_doc = frappe.get_doc('Course', course.name)
+
+            course_list.append({
+                "course_id": course_doc.name,
+                "course_name": course_doc.name,
+                "course_image": course_doc.course_image,
+                "description": course_doc.course_description,
+            })
+        
+        frappe.response['messages'] = {
+            'status': 1,
+            'courses': course_list
+        }
+    
+    else:
+        frappe.response['messages'] = {
+            'status': 0,
+            'error': 'No courses found'
+        }
+    return
